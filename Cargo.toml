@@ -12,10 +12,14 @@ license = "MIT"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [features]
-default = ["plist/serde"]
+default = ["plist/serde", "serde"]
 enable_unstable_features_that_may_break_with_minor_version_bumps = ["plist/enable_unstable_features_that_may_break_with_minor_version_bumps"]
 no_re_export = []
 
 [dependencies]
 easy-ext = "1"
 plist = { git = "https://github.com/naturecodevoid/rust-plist", default-features = false } # we will enable serde in our default features
+serde = { version = "1", optional = true } # we will enable it in our default feature
+
+[dev-dependencies]
+serde = { version = "1", features = ["derive"] }
