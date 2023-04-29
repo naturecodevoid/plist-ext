@@ -1,0 +1,21 @@
+[package]
+name = "plist-ext"
+description = "A collection of extension traits for the wonderful plist crate."
+authors = ["naturecodevoid"]
+homepage = "https://github.com/naturecodevoid/plist-ext"
+repository = "https://github.com/naturecodevoid/plist-ext"
+documentation = "https://docs.rs/plist-ext"
+version = "1.0.0"
+edition = "2021"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = ["plist/serde"]
+enable_unstable_features_that_may_break_with_minor_version_bumps = ["plist/enable_unstable_features_that_may_break_with_minor_version_bumps"]
+no_re_export = []
+
+[dependencies]
+easy-ext = "1"
+plist = { git = "https://github.com/naturecodevoid/rust-plist", default-features = false } # we will enable serde in our default features
