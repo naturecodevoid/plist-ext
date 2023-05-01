@@ -38,6 +38,7 @@ If you have a suggestion for a method we should add, feel free to create a GitHu
 */
 
 #[cfg(not(feature = "no_re_export"))]
+#[doc(no_inline)]
 pub use plist::*;
 
 #[cfg(not(feature = "no_re_export"))]

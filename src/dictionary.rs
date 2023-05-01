@@ -1,6 +1,5 @@
-//! Re-export of [`plist::dictionary`]
-
 #[cfg(not(feature = "no_re_export"))]
+#[doc(no_inline)]
 pub use plist::dictionary::*;
 
 /// This allows us to have DictionaryExt in this file without exposing it in the `dictionary` module
