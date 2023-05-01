@@ -1,7 +1,6 @@
-#[cfg(feature = "serde")]
 use plist::Error;
-#[cfg(not(feature = "serde"))]
-use plist::{Data, Date, Dictionary, Error, Integer, Uid, Value};
+#[cfg(any(not(feature = "serde"), doc))]
+use plist::{Data, Date, Dictionary, Integer, Uid, Value};
 
 /// The formats a plist can be serialized to.
 pub enum PlistFormat {
